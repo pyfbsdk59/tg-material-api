@@ -98,3 +98,6 @@ async def download_file(message_id: int):
         media_type="application/octet-stream", 
         headers=headers
     )
+@app.get("/")
+def read_root():
+    return {"status": "Telegram Material API is running!"}
